@@ -1,0 +1,88 @@
+@media only screen and (max-width:790px) {
+    .dark .society .societyWrap {
+        display: block;
+    }
+    .dark .society .societyWrap>* {
+        margin: 0 auto;
+        text-align: center;
+        padding: 10px;
+    }
+}
+
+@media only screen and (max-width:520px) {
+    .dark .society .societyWrap>* {
+        margin: 0 auto;
+        text-align: center;
+        padding: 5px;
+    }
+    h2 {
+        font-size: 1.2em;
+    }
+    p {
+        font-size: 1em;
+    }
+    .dark .link .linkAll a > p {
+        font-size: 0.85em;
+        line-height: 150%;
+    }
+    .dark .society .societyWrap .sMedia .icon {
+        font-size: 1em;
+        height: 24px;
+        width: 24px;
+        margin-right: 5px;
+    }
+    .dark .society .societyWrap .sMedia {
+        width: auto;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+    .dark .wrap header {
+        display: block;
+        text-align: center;
+        margin: 0 auto;
+        width: auto;
+    }
+    .dark .wrap header .capitalize {
+        padding-bottom: 10px;
+    }
+    .dark .wrap header .logo {
+        padding: 10px 0;
+        margin: 0 auto;
+    }
+    .dark .wrap .about {
+        display: block;
+        text-align: center;
+        padding: 10px 0;
+    }
+    .dark .wrap .about .nav>* {
+        padding-top: 5px;
+        margin: 0 auto;
+    }
+    .dark .about .nav p:first-child {
+  border-right: 0;
+}
+}
+
+@media only screen and (max-width:320px) {
+    h2 {
+        font-size: 0.9em;
+    }
+    p {
+        font-size: 0.7em;
+    }
+    button {
+    font-size: 0.7em;
+    width: 25%;
+    height: 20px;
+    }
+    .light article .first>*:nth-of-type(-n+3), .light article .second>*>*:nth-of-type(-n+3) {
+        margin-bottom: 8px;
+    }
+    .light article .third>*:nth-of-type(-n+2), .light article .fourth>*:nth-of-type(-n+2), .light article .fifth>*:nth-of-type(-n+2) {
+        margin-bottom: 8px;
+    }
+    .light article > * {
+        padding: 10px 0;
+}
+}

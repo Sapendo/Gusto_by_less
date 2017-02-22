@@ -1,0 +1,284 @@
+@colorHeaderFooter: #e1e1e1;
+@colorHeaderFooterDark: #53545e;
+@colorArticle: #f1f1f1;
+@Wwidth: 1000px;
+@ConWidth: 94%;
+@marginContent: 0 auto;
+@white: #fff;
+@tablet: ~"(max-width: 999px)";
+@tabletHeader: ~"(max-width: 520px)";
+
+.font(@size: 1.14em) {
+    font: bold @size "Helvetica Neue", sans-serif;
+}
+
+.centerBlok(){
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+button {
+    .font();
+    background-color: @colorHeaderFooterDark;
+    color: @white;
+    width: 79px;
+    height: 36px;
+    border: none;
+    &:hover {
+        cursor: pointer;
+        background-color: transparent;
+        color: #453939;
+        box-shadow: inset 0 0 30px 2px @colorHeaderFooterDark;
+    }
+}
+h2 {
+    color: @colorHeaderFooterDark;
+    .font (1.5em);
+}
+p {
+    .font();
+    color: #bfc0c3;
+}
+.upper {
+    text-transform: uppercase;
+}
+.capitalize {
+    text-transform: capitalize;
+}
+.colorChange {
+    color: #A5A5AE;
+}
+.lineHeight {
+    line-height: 142%;
+}
+
+.dark {
+    background-color: @colorHeaderFooter;
+    .wrap {
+        background-color: @colorHeaderFooterDark;
+        max-width: @Wwidth;// Почему не работает через width???? только преставку max- нужно делать!!!!
+        .centerBlok();
+        justify-content: center;
+            header {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                width: @ConWidth;
+                align-items: baseline;
+            .logo {
+                display: flex;
+                align-items: baseline;
+                padding: 33px 0;
+                p {
+                    color: @white;
+                    .font(1.87em);
+                }
+                img {
+                    margin-right: 25px;
+                }
+            }
+            p {
+                .font(0.75em);
+                color: @white;
+                a {
+                    color: #A5A5AE;
+                    &:hover {
+                        color: inherit;
+                    }
+                }
+            }
+        }
+    }
+    .society {
+        background-color: @colorArticle;
+        align-items: center;
+        display: flex;
+        width: @Wwidth;
+        .societyWrap {
+            width: @ConWidth;
+            .centerBlok();
+            justify-content: space-between;
+            align-items: center;
+        }
+        .sMedia {
+            padding: 30px 0;
+            display: flex;
+            justify-content: space-between;
+            width: 450px;
+            & .icon{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 44px;
+                width: 44px;
+                border-radius: 50%;
+                background: #E0E0E0;
+                color: @colorHeaderFooterDark;
+                font-size: 1.5em;
+                &:hover {
+                    cursor: pointer;
+                    color: #E0E0E0;
+                    background: @colorHeaderFooterDark;
+                }
+            }
+        }
+    }
+    .link {
+        background-color: @colorHeaderFooterDark;
+        width: @ConWidth;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        padding: 30px 0;
+        @media all and (max-width: 580px)
+        {
+            padding: 10px 0;
+        }
+        &>p {
+            margin-right: 30px;
+        }
+         p {
+            color: @white;
+            width: 600px;
+            line-height: 171%;
+             @media all and (max-width: 630px) {
+                 .font (1em);
+                 line-height: 130%;
+             }
+             @media @tabletHeader {
+                 .font (0.75em);
+             }
+       
+        }
+        .linkAll {
+            a>p {
+                width: 160px;
+                @media all and (max-width: 630px) {
+                 width: 140px;
+             }
+                @media @tabletHeader {
+                 max-width: 100px;
+             }
+                &:hover {
+                    color: #98999d;
+                }
+            }
+            @media all and (max-width: 630px) {
+                 .font (1em);
+                 line-height: 130%;
+             }
+            @media @tabletHeader {
+                 .font (0.85em);
+             }
+        }
+    }
+    .about {
+        background-color: @colorHeaderFooterDark;
+        width: @ConWidth;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 20px 0;
+        border-top: 1px solid #a6a7b0;
+        p {
+            .font (0.75em);
+            span {
+                color: @white;
+            }
+        }
+        .nav {
+            display: flex;
+            flex-wrap: wrap;
+            p {
+                padding: 0 10px;
+                &:hover {
+                        cursor: pointer;
+                        color: @white;
+                    }
+                &:first-child {
+                border-right: 1px solid #a6a7b0;
+                    
+            }
+            }
+        }
+    }
+    
+}
+
+.light {
+    background-color: @colorArticle;
+    article {
+        max-width: @Wwidth;
+        .centerBlok();
+        background-color: @white;
+        justify-content: center;
+        &>* {
+            width: 94%;
+            padding: 30px 0;
+            &:nth-of-type(-n+4) {
+                border-bottom: 1px solid #EEEEEE;
+            }
+        }
+        & .first {
+                &>*:nth-of-type(-n+3) {
+                    margin-bottom: 20px;
+                }
+                img {
+                    width: 100%;
+                    height: auto;//Почему не работает по умолчанию????
+                    
+                }
+        }
+        & .second {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            &>* {
+                flex-basis: 455px;
+                flex-grow: 1;
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+                &>*:nth-of-type(-n+3) {
+                    margin-bottom: 20px;
+                }
+            }
+            & .one {
+                padding-right: 30px;
+                @media screen and @tablet {
+                    padding-right: 0;
+                    margin-bottom: 15px;
+                    border-bottom: 1px solid #EEEEEE;
+                }
+            }
+        }
+        & .third {
+            display: flex;
+            width: 970px;
+            justify-content: space-between;
+            flex-flow: row wrap;
+            & .bl {
+                flex: 1 1 293px;
+                height: 293px;
+                background-color: #ddd;
+                margin: 15px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                .font(1.75em);
+            }
+        }
+        & .fourth {
+            &>*:nth-of-type(-n+2) {
+                    margin-bottom: 20px;
+                }
+        }
+        & .fifth {
+            &>*:nth-of-type(-n+2) {
+                    margin-bottom: 20px;
+                }
+        }
+    }
+}
